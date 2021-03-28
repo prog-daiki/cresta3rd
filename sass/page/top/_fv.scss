@@ -1,0 +1,70 @@
+/* ----------------------- */
+/* fv
+/* ----------------------- */
+.fv{
+    height: 100vh;
+}
+
+.fv::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $color-fv;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+}
+
+.main-copy{
+    height: 86.5%;
+    width: 76.4%;
+    background-image: url(../images/kv-img@2x-min.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.copy-wrapper{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%,-50%);
+    color: $color-white;
+
+    @include mq{
+        right: -15%;
+        transform: translate(0,-50%);
+    }
+}
+
+.copy_jp{
+    font-size: 2rem;
+    margin-bottom: 4px;
+
+    @include mq{
+        font-size: 1.6rem;
+    }
+}
+
+.copy_company{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+    @include mq{
+        font-size: 1.6rem;
+    }
+}
+
+.large-copy{
+    font-size: 7.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+
+    @include mq{
+        font-size: 5.4rem;
+    }
+}

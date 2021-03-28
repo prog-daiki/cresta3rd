@@ -1,0 +1,33 @@
+/* ----------------------- */
+/* topics
+/* ----------------------- */
+.topics-list{
+    max-width: 700px;
+    margin-left: auto;
+}
+
+.topics-item{
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+
+    @include mq{
+        margin-bottom: 20px;
+    }
+}
+
+.topics-date{
+    color: $color-topic;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.topics-title{
+    color: $color-font;
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    @include mq{
+        font-size: 1.2rem;
+    }
+}

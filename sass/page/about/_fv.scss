@@ -1,0 +1,50 @@
+/* ----------------------- */
+/* fv
+/* ----------------------- */
+.fv{
+    height: 60vh;
+    min-height: 450px;
+}
+
+.fv::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #222;
+    width: 50%;
+    height: 60vh;
+    min-height: 450px;
+    z-index: -1;  
+}
+
+.main-copy{
+    height: 86%;
+    width: 76.4%;
+    background-size: cover;
+    background-position: center 0;
+    position: relative;
+    background-image: url(../images/heading-img@2x-min.jpg);
+}
+
+.page-title{
+    font-size: 7.2rem;
+    font-weight: bold;
+    color: $color-white;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%,-50%);
+
+    @include mq{
+        font-size: 5.2rem;
+        transform: translate(30%,-50%);
+    }
+
+    span{
+        font-size: 2rem;
+        display: block;
+    }
+}
+

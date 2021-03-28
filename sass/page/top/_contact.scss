@@ -1,0 +1,40 @@
+/* ----------------------- */
+/* contact
+/* ----------------------- */
+.section-wrapper:last-of-type{
+    padding-bottom: 120px;
+
+    @include mq{
+        padding-bottom: 80px;
+    }
+}
+
+.content-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+}
+
+.contact-content{
+    width: 40%;
+
+    @include mq{
+        max-width: 100%;
+        margin-top: 30px;
+        width: 440px;
+    }
+}
+
+.contact-img-wrapper{
+    width: 52.7%;
+
+    @include mq{
+        width: 520px;
+        max-width: 100%;
+    }
+}

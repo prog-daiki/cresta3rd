@@ -1,0 +1,156 @@
+/* ----------------------- */
+/* header
+/* ----------------------- */
+.header-logo{
+    width: 260px;
+    position: fixed;
+    top: 30px;
+    left: 4vw;
+    z-index: 1;
+
+    @include mq(){
+        width: 189px;
+        top: 33.8px;
+    }
+
+    svg{
+        @include mq(){
+            width: 189px;
+        }
+    }
+
+}
+
+.header-logo.black svg path{
+    fill: $color-font;
+    transition: .3s;
+}
+
+.header-nav{
+    font-weight: bold;
+    font-size: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 36.1vw;
+    text-align: center;
+    padding: 120px 0 0;
+    background-color: rgba(34, 34, 34, 0.95);
+    z-index: 2;
+    transition: .3s;
+    opacity: 0;
+    transform: translateX(100%);
+
+    @include mq{
+        width: 67.7%;
+    }
+
+    &.open{
+        transform: translateX(0);
+        opacity: 1;
+        transition: .3s;
+    }
+}
+
+.header-nav-item{
+    margin-bottom: 30px;
+
+    &:first-of-type{
+        margin-bottom: 40px;
+    }
+
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+
+    a{
+        color: $color-white;
+
+        &:hover{
+            opacity: 0.7;
+            transition: .3s;
+        }
+    }
+}
+
+/*--------------------*/
+// ハンバーガーメニュー
+/*--------------------*/
+.burger-btn{
+        display: flex;
+        align-items: center;
+        position: fixed;
+        z-index: 3;
+        cursor: pointer;
+        top: 36px;
+        right: 4vw;
+
+        @include mq{
+            top: 37px;
+        }
+
+    &.close{
+        .bar_top{
+            transform: translateY(2px) rotate(30deg);
+            transition: .3s;
+        }
+        .bar_mid{
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        .bar_bottom{
+            transform: translateY(-2px) rotate(-30deg);
+            transition: .3s;
+        }
+    }
+
+    &.black .bar{
+        background-color: $color-font;
+        transition: .3s;
+    }
+
+    &.black .menu{
+        color: $color-font;
+        transition: .3s;
+    }
+
+}
+
+.bar {
+    width: 22px;
+    height: 2px;
+    display: block;
+    background-color: #fff;
+    border-radius: 1px;
+
+&_top{
+        transform: translateY(-4px);
+        transition: transform .3s;
+}
+
+&_bottom{
+        transform: translateY(4px);
+        transition: transform .3s;
+    }
+}
+
+.menu{
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $color-white;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.burger-musk{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}

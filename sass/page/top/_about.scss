@@ -1,0 +1,28 @@
+/* ----------------------- */
+/* about
+/* ----------------------- */
+.section-wrapper:first-of-type{
+    padding-top: 120px;
+
+    @include mq{
+        padding: 80px 0 4vw;
+    }
+}
+
+.about-bg{
+    background-image: url(../images/about-img@2x-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 110px 0 110px 50px;
+
+    @include mq{
+        padding: 50px 4vw;
+    }
+}
+
+.about-content{
+    max-width: 590px;
+    padding: 50px 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+}
